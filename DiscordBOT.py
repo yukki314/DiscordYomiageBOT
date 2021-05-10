@@ -17,6 +17,8 @@ client = discord.Client()
 if not discord.opus.is_loaded(): 
     discord.opus.load_opus("heroku-buildpack-libopus")
 
+token = os.environ["DISCORD_BOT_TOKEN"]    
+    
 patternlist1 = ['w{3,}','ｗ{3,}']
 word1 = ['わらわら','わらわら']
 
@@ -188,4 +190,4 @@ async def on_message(message: discord.Message):
             pass
 
 
-client.run("ODExNTE1MDIyMjk5NDk2NDQ4.YCzUQg.isis5dYcgjo622HqkxzHd3phTPM")
+client.run(token)
